@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperar Contraseña</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/img/imagen3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #passwordResetForm {
+    background-color: rgba(237, 228, 228, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin: 6px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #03296e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #458ba0;
+  }
+
+  #mensajeExito {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  #mensajeError {
+    font-size: 24px;
+    color: rgb(18, 144, 179);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div id="passwordResetForm">
+    <h2>Recuperar Contraseña</h2>
+    <form id="passwordResetForm" onsubmit="return validarFormulario()">
+      <label for="email">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="newPassword">Nueva Contraseña:</label><br>
+      <input type="password" id="newPassword" name="newPassword" required><br><br>
+      
+      <label for="confirmPassword">Confirmar Contraseña:</label><br>
+      <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+      <label for="codigoSeguridad">Código de Seguridad:</label><br>
+      <input type="text" id="codigoSeguridad" name="codigoSeguridad" required><br><br>
+
+      <input type="submit" value="Enviar Contraseña">
+    </form>
+    <div id="mensajeExito" style="display: none;">Revisa tu correo.</div>
+    <div id="mensajeError" style="display: none;"></div>
+  </div>
+
+  <script>
+    function validarFormulario() {
+      var newPassword = document.getElementById("newPassword").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var codigoSeguridad = document.getElementById("codigoSeguridad").value;
+      var mensajeExito = document.getElementById("mensajeExito");
+      var mensajeError = document.getElementById("mensajeError");
+
+      // Verificar si las contraseñas son iguales
+      if (newPassword !== confirmPassword) {
+        mensajeExito.style.display = "none";
+        mensajeError.textContent = "Las contraseñas no coinciden.";
+        mensajeError.style.display = "block";
+        return false;
+      }
+
+      // Verificar si la contraseña cumple con los requisitos
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passwordRegex.test(newPassword)) {
+        mensajeExito.style.display = "none";
+        mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial.";
+        mensajeError.style.display = "block";
+        return false;
+      }
+
+      // Verificar si el código de seguridad es correcto
+      if (codigoSeguridad !== ":uca") {
+        mensajeExito.style.display = "none";
+        mensajeError.textContent = "El código de seguridad no coincide.";
+        mensajeError.style.display = "block";
+        return false;
+      }
+
+      // Mostrar mensaje de éxito
+      mensajeError.style.display = "none";
+      mensajeExito.style.display = "block";
+
+      // Redireccionar a la página accesar.html
+      setTimeout(function() {
+        window.location.href = "accesar.html";
+      }, 2000);
+
+      // Devolver false para evitar que el formulario se envíe
+      return false;
+    }
+  </script>
+</body>
+</html>

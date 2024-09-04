@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/CineramaLogo.png">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    CINECASA
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- CSS Files -->
+
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/paper-kit.css?v=2.2.0" rel="stylesheet" />
+  <link href="./assets/css/Carrousel.css" rel="stylesheet" />
+  <link href="./assets/css/Valoracion.css" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+
+  <style>
+    .video-container {
+      margin-bottom: 30px;
+    }
+
+    .video-container video {
+      width: 100%;
+    }
+
+    .video-name {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 28px;
+      margin-top: 10px;
+      text-align: center;
+      color: #21bad9; /* Cambia el color del texto aquí */
+    }
+
+    /* Estilo para el fondo */
+    .page-header.section-dark {
+      background-size: cover;
+      background-position: center;
+      min-height: 540px; /* ajusta la altura del fondo */
+    }
+
+    /* Estilo para hacer los iconos de "Síguenos" más grandes */
+    .social-icons i.fa {
+      font-size: 30px; /* Cambia el tamaño del icono aquí */
+    }
+  </style>
+</head>
+
+<body class="index-page sidebar-collapse">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="300">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#" target="_blank">
+          <img src="./assets/img/CineramaLogo.png" height="80px">
+        </a>
+
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"><i class="fa fa-home"></i> Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tarjetas.html" class="nav-link"><i class="fa fa-star" aria-hidden="true"></i> Favoritos</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="https://www.google.com/" class="nav-link"><i class="fa fa-arrow-circle-right"></i> SALIR</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- End Navbar -->
+  <div class="page-header section-dark" style="background-image: url('./assets/img/Novo-Cinemas-IMG-Worlds-of-Adventure-dubai.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+      <div class="container">
+        <div class="title-brand">
+          <h1 class="presentation-title"> Lo más visto  </h1>
+        </div>
+        <h2 class="presentation-subtitle text-center"> ¡Enterate aquí! </h2>
+      </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
+    <h6 class="category category-absolute">
+      <a href="#" target="_blank" class="social-icons">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#" target="_blank" class="social-icons">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#" target="_blank" class="social-icons">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </h6>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 style="color: rgb(241, 101, 7); font-family: 'Cinzel Decorative', sans-serif;">Lo mas visto hoy</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="video-container">
+                <video controls>
+                  <source src="./assets/videos/video1.mp4" type="video/mp4">
+                  Tu navegador no admite el elemento de video.
+                </video>
+                <div class="video-name">1. Whish</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="video-container">
+                <video controls>
+                  <source src="./assets/videos/video2.mp4" type="video/mp4">
+                  Tu navegador no admite el elemento de video.
+                </video>
+                <div class="video-name">2. The Marvels</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="video-container">
+                <video controls>
+                  <source src="./assets/videos/video3.mp4" type="video/mp4">
+                  Tu navegador no admite el elemento de video.
+                </video>
+                <div class="video-name">3. SKAL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

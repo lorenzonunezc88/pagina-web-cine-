@@ -1,0 +1,38 @@
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: white;
+    border-color: white;
+    border: 2px;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: rgb(187, 61, 61);
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: rgb(187, 61, 61);
+}

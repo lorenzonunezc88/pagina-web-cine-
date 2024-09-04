@@ -1,0 +1,16 @@
+
+
+user   123	
+password	123
+	
+
+user   admin
+Uca24*
+	
+
+user   admin2
+password   Uca25*
+	
+
+user   user01
+password   Cine24*
